@@ -1,0 +1,17 @@
+.cardsContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 2rem;
+}
+
+.card {
+  width: 200px;
+  aspect-ratio: 1;
+  margin: .5rem;
+}
+
+.card img {
+  max-width: 100%;
+}
