@@ -1,22 +1,22 @@
+import { useState } from "react";
 import { princessList } from "../data/princess";
+import { shuffle } from "../utils";
 import Layout from "./Layout";
-import Card from "../components/Card";
-import commonStyles from "../styles/common.module.css";
-import styles from "../styles/game.module.css";
+import Board from "../components/Board";
+import styles from "../styles/common.module.css";
 
 function Game() {
+  const [characters, setCharacters] = useState([]);
+
+  const shuffleCharacters = () => {
+    setCharacters([...shuffle(princessList), ...shuffle(princessList)]);
+  };
+
   return (
     <Layout>
-      <h2 className={commonStyles.title}>MEMOTEST PRINCESAS</h2>
-      <div className={styles.cardsContainer}>
-        {princessList?.map((princess) => (
-          <Card key={princess.id} {...princess} />
-        ))}
-        {princessList?.map((princess) => (
-          <Card key={princess.id} {...princess} />
-        ))}
-      </div>
-      <a className={commonStyles.linkSmall} href="/">
+      <h2 className={styles.title}>MEMOTEST PRINCESAS</h2>
+      <Board characters={characters} shuffleCharacters={shuffleCharacters} />
+      <a className={styles.linkSmall} href="/">
         volver al inicio
       </a>
     </Layout>

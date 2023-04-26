@@ -1,17 +1,52 @@
+.container {
+  margin: 1rem 0 2rem;
+}
+
 .cardsContainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin: 1rem 0 2rem;
 }
 
 .card {
   width: 200px;
   aspect-ratio: 1;
   margin: .5rem;
+  transform: rotateY(180deg);
+  transition: .2s;
 }
 
-.card img {
+.cardActive {
+  transform: rotateY(0deg);
+  background: red;
+  transition: .2s;
+}
+
+.cardFound {
+  transform: rotateY(0deg);
+  background: green;
+  transition: .2s;
+}
+
+.characterImage {
   max-width: 100%;
+  object-fit: contain;
+  aspect-ratio: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+}
+
+.cardActive .characterImage,
+.cardFound .characterImage {
+  visibility: visible;
+  opacity: 1;
+  transition: .2s;
+}
+
+.textCardsFound {
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
 }
