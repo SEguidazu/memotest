@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
 import styles from "../styles/game.module.css";
+import commonStyles from "../styles/common.module.css";
 
 function Board({ characters, shuffleCharacters }) {
   const [flippedCards, setFlippedCards] = useState([]);
@@ -14,6 +15,15 @@ function Board({ characters, shuffleCharacters }) {
     if (flippedCards.length < 2) {
       setFlippedCards((flippedCards) => [...flippedCards, index]);
     }
+  };
+
+  const isGameOver = () =>
+    Math.round(foundCards.length / 2) === Math.round(characters.length / 2);
+
+  const restartGame = () => {
+    shuffleCharacters();
+    setFlippedCards([]);
+    setFoundCards([]);
   };
 
   useEffect(() => {
@@ -38,11 +48,11 @@ function Board({ characters, shuffleCharacters }) {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.textCardsFound}>
-        Princesas encontradas: {Math.round(foundCards.length / 2)} de{" "}
+      <span className={styles.textCardsFound}>
+        {Math.round(foundCards.length / 2)} de{" "}
         {Math.round(characters.length / 2)}
-      </h3>
-      {characters.length ? (
+      </span>
+      {characters.length > 0 && (
         <div className={styles.cardsContainer}>
           {characters.map((princess, index) => (
             <Card
@@ -55,8 +65,21 @@ function Board({ characters, shuffleCharacters }) {
             />
           ))}
         </div>
-      ) : (
-        <button onClick={() => shuffleCharacters()}>Comenzar juego</button>
+      )}
+      {isGameOver() && (
+        <div className={commonStyles.modalContainer}>
+          <div className={styles.gameOverContainer}>
+            <h3>
+              GANASTE! <br /> QUERES JUGAR DE NUEVO?
+            </h3>
+            <button
+              className={commonStyles.start}
+              onClick={() => restartGame()}
+            >
+              VOLVER A MEZCLAR
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );

@@ -17,6 +17,10 @@
   transition: .2s;
 }
 
+.card:hover:not(:disabled) {
+  cursor: pointer;
+}
+
 .cardActive {
   transform: rotateY(0deg);
   background: red;
@@ -48,5 +52,34 @@
 .textCardsFound {
   font-size: 1.2rem;
   text-align: center;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 5;
+  padding: .6rem 1rem;
+  margin: 0;
   color: white;
+  background-color: #06511d;
+  border-radius: 18px;
+}
+
+.gameOverContainer {
+  max-width: 500px;
+  width: 100%;
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: .5rem .8rem;
+  border-radius: 18px;
+  background-color: var(--background);
+  box-shadow: 0 0 40px -2px black;
+}
+
+.gameOverContainer h3 {
+  color: white;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 0;
 }

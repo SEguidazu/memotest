@@ -15,8 +15,15 @@ function Game() {
   return (
     <Layout>
       <h2 className={styles.title}>MEMOTEST PRINCESAS</h2>
-      <Board characters={characters} shuffleCharacters={shuffleCharacters} />
-      <a className={styles.linkSmall} href="/">
+      {characters.length > 0 && (
+        <Board characters={characters} shuffleCharacters={shuffleCharacters} />
+      )}
+      {characters.length <= 0 && (
+        <button className={styles.start} onClick={() => shuffleCharacters()}>
+          Comenzar juego
+        </button>
+      )}
+      <a className={styles.linkSticky} href="/">
         volver al inicio
       </a>
     </Layout>
