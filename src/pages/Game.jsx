@@ -23,7 +23,7 @@ function Game() {
           Comenzar juego
         </button>
       )}
-      <a className={styles.linkSticky} href="/">
+      <a className={styles.linkSticky} href="/memotest/">
         volver al inicio
       </a>
     </Layout>

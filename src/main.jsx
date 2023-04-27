@@ -7,17 +7,17 @@ import "./styles/global.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route index path="/" element={<Home />} />
-        <Route path="/game" element={<Game />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route index path="/memotest/" element={<Home />} />
+      <Route path="/memotest/game" element={<Game />} />
+    </Routes>
   );
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );
