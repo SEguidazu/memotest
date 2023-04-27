@@ -2,62 +2,62 @@ const princessList = [
   {
     id: 1,
     name: "Ariel",
-    imagePath: "/ariel.webp",
+    imagePath: "ariel.webp",
   },
   {
     id: 2,
     name: "Aurora",
-    imagePath: "/aurora.png",
+    imagePath: "aurora.png",
   },
   {
     id: 3,
     name: "Bella",
-    imagePath: "/bella.png",
+    imagePath: "bella.png",
   },
   {
     id: 4,
     name: "Blancanieves",
-    imagePath: "/blancanieves.png",
+    imagePath: "blancanieves.png",
   },
   {
     id: 5,
     name: "Cenicienta",
-    imagePath: "/cenicienta.png",
+    imagePath: "cenicienta.png",
   },
   {
     id: 6,
     name: "Jazmin",
-    imagePath: "/jazmin.png",
+    imagePath: "jazmin.png",
   },
   {
     id: 7,
     name: "Merida",
-    imagePath: "/merida.webp",
+    imagePath: "merida.webp",
   },
   {
     id: 8,
     name: "Mulan",
-    imagePath: "/mulan.png",
+    imagePath: "mulan.png",
   },
   {
     id: 9,
     name: "Pocahontas",
-    imagePath: "/pocahontas.png",
+    imagePath: "pocahontas.png",
   },
   {
     id: 10,
     name: "Rapunzel",
-    imagePath: "/rapunzel.webp",
+    imagePath: "rapunzel.webp",
   },
   {
     id: 11,
     name: "Tiana",
-    imagePath: "/tiana.png",
+    imagePath: "tiana.png",
   },
   {
     id: 12,
     name: "Moana",
-    imagePath: "/moana.webp",
+    imagePath: "moana.webp",
   },
 ];
 
