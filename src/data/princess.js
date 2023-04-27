@@ -7,27 +7,27 @@ const princessList = [
   {
     id: 2,
     name: "Aurora",
-    imagePath: "/aurora.webp",
+    imagePath: "/aurora.png",
   },
   {
     id: 3,
     name: "Bella",
-    imagePath: "/bella.webp",
+    imagePath: "/bella.png",
   },
   {
     id: 4,
     name: "Blancanieves",
-    imagePath: "/blancanieves.webp",
+    imagePath: "/blancanieves.png",
   },
   {
     id: 5,
     name: "Cenicienta",
-    imagePath: "/cenicienta.webp",
+    imagePath: "/cenicienta.png",
   },
   {
     id: 6,
     name: "Jazmin",
-    imagePath: "/jazmin.webp",
+    imagePath: "/jazmin.png",
   },
   {
     id: 7,
@@ -37,12 +37,12 @@ const princessList = [
   {
     id: 8,
     name: "Mulan",
-    imagePath: "/mulan.webp",
+    imagePath: "/mulan.png",
   },
   {
     id: 9,
     name: "Pocahontas",
-    imagePath: "/pocahontas.webp",
+    imagePath: "/pocahontas.png",
   },
   {
     id: 10,
@@ -52,7 +52,7 @@ const princessList = [
   {
     id: 11,
     name: "Tiana",
-    imagePath: "/tiana.webp",
+    imagePath: "/tiana.png",
   },
   {
     id: 12,
