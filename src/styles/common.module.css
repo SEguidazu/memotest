@@ -36,26 +36,6 @@
   transition: .2s;
 }
 
-.linkSticky {
-  font-size: 1rem;
-  color: var(--background);
-  padding: .5rem 1rem;
-  border: 2px solid white;
-  border-radius: 16px;
-  text-decoration: none;
-  background-color: white;
-  transition: .2s;
-  position: fixed;
-  right: 2rem;
-  bottom: 2rem;
-}
-
-.linkSticky:hover {
-  color: white;
-  background-color: var(--background);
-  transition: .2s;
-}
-
 .modalContainer {
   display: flex;
   justify-content: center;
